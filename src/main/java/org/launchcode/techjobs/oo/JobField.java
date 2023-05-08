@@ -1,5 +1,4 @@
-package org.launchcode.techjobs.oo.JobField;
-import org.launchcode.techjobs.oo.Employer;
+package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 public abstract class JobField {

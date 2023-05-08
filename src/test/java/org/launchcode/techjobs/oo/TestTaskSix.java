@@ -15,7 +15,7 @@ public class TestTaskSix extends AbstractTest {
         try {
             Class theClass = getClassByName("JobField");
         } catch (ClassNotFoundException e) {
-            fail("Class org.launchcode.techjobs.oo.JobField does not exist");
+            fail("Class org.launchcode.techjobs.oo.JobField.JobField does not exist");
         }
     }
 

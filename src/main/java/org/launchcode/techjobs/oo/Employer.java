@@ -1,8 +1,7 @@
 package org.launchcode.techjobs.oo;
 
-import org.launchcode.techjobs.oo.JobField.JobField;
+import org.launchcode.techjobs.oo.JobField;
 
-import java.util.Objects;
 
 public class Employer extends JobField {
     public Employer(String value) {
