@@ -35,7 +35,7 @@ public class Job {
         this.name = name;
     }
 
-    public Employer getEmployer() {
+    public  Employer getEmployer() {
         return employer;
     }
 
@@ -70,6 +70,55 @@ public class Job {
     public int getId() {
         return id;
     }
+    @Override
+    public String toString(){
+        String nameString;
+        if (this.name == null || this.name.equals("")) {
+            nameString = "Data not available";
+        } else {
+            nameString = this.name;
+        }
+
+        String employerString;
+        if (this.employer == null || this.employer.getValue().equals("")) {
+            employerString = "Data not available";
+        } else {
+            employerString = this.employer.toString();
+        }
+
+        String locationString;
+        if (this.location == null || this.location.getValue().equals("")) {
+            locationString = "Data not available";
+        } else {
+            locationString = this.location.toString();
+        }
+
+        String positionTypeString;
+        if (this.positionType == null || this.positionType.getValue().equals("")) {
+            positionTypeString = "Data not available";
+        } else {
+            positionTypeString = this.positionType.toString();
+        }
+
+        String coreCompetencyString;
+        if (this.coreCompetency == null || this.coreCompetency.getValue().equals("")) {
+            coreCompetencyString = "Data not available";
+        } else {
+            coreCompetencyString = this.coreCompetency.toString();
+        }
+
+        return "\n" +
+                "ID: " + id +
+                "\nName: " + nameString +
+                "\nEmployer: " + employerString +
+                "\nLocation: " + locationString +
+                "\nPosition Type: " + positionTypeString +
+                "\nCore Competency: " + coreCompetencyString +
+                "\n";
+    }
+
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -83,6 +132,8 @@ public class Job {
     public int hashCode() {
         return Objects.hash(getId());
     }
+
+
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
